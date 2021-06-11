@@ -3,12 +3,19 @@ const vm = Vue.createApp({
         return {
             firstName: 'Brady',
             lastName: 'Peterson',
-            url: 'https://google.com'
+            url: 'https://google.com',
+            age: 32
         }
     },
     methods: {
         fullName() {
             return `${this.firstName} ${this.lastName}`
+        },
+        increment() {
+            this.age++
+        },
+        updateLastName(event){
+            this.lastName = event.target.value
         }
     }
 }).mount('#app')
