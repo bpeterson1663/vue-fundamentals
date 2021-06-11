@@ -14,7 +14,7 @@
       <label>First Name</label>
       <input type="text" v-model="firstName"/>
       <label>Last Name</label>
-      <input type="text" :value="lastName" @input="updateLastName('Last Name fired', $event)" />
+      <input type="text" :value="lastName" @input.prevent="updateLastName('Last Name fired', $event)" />
       <button type="button" @click="increment">Increment</button>
       <button type="button" @click="age--">Decrement</button>
 
