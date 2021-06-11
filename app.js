@@ -1,13 +1,13 @@
 const vm = Vue.createApp({
     data() {
         return {
-            greeting: 'Hello',
-            firstName: 'Brady'
+            firstName: 'Brady',
+            lastName: 'Peterson'
         }
     },
     methods: {
         fullName() {
-            return `${this.greeting} ${this.firstName}`
+            return `${this.firstName} ${this.lastName}`
         }
     }
 }).mount('#app')
