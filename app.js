@@ -2,6 +2,7 @@ const vm = Vue.createApp({
     data() {
         return {
             firstName: 'Brady',
+            middleName: '',
             lastName: 'Peterson',
             url: 'https://google.com',
             age: 32
@@ -9,7 +10,7 @@ const vm = Vue.createApp({
     },
     methods: {
         fullName() {
-            return `${this.firstName} ${this.lastName}`
+            return `${this.firstName} ${this.middleName} ${this.lastName}`
         },
         increment() {
             this.age++
@@ -17,6 +18,9 @@ const vm = Vue.createApp({
         updateLastName(message, event){
             console.log(message)
             this.lastName = event.target.value
+        },
+        updateMiddleName(event){
+            this.middleName = event.target.value
         }
     }
 }).mount('#app')

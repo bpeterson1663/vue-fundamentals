@@ -13,6 +13,8 @@
       <hr />
       <label>First Name</label>
       <input type="text" v-model="firstName"/>
+      <label>Middle name</label>
+      <input type="text" @keyup.enter="updateMiddleName" />
       <label>Last Name</label>
       <input type="text" :value="lastName" @input.prevent="updateLastName('Last Name fired', $event)" />
       <button type="button" @click="increment">Increment</button>
