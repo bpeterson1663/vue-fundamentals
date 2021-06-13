@@ -1,15 +1,4 @@
 let vm = Vue.createApp({
-  data() {
-    return {
-      message: "Hello world!"
-    }
-  },
-  render() {
-    return Vue.h(
-      'h1',
-      this.message
-    )
-  },
   beforeCreate() {
     console.log("beforeCreate called", this.message)
   },
@@ -33,6 +22,15 @@ let vm = Vue.createApp({
   },
   unmounted() {
     console.log("unmounted called")
+  }
+})
+
+vm.component('hello', {
+  template: `<h1>{{ message }}</h1>`,
+  data() {
+    return {
+      message: "Hello from a component"
+    }
   }
 })
 
